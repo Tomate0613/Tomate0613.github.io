@@ -119,3 +119,7 @@ body {
     text-shadow: 0 0 5px #ff0000;
     color:#ffbab8;
 }
+
+#quote {
+    width: 20vw;
+}
