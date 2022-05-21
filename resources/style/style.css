@@ -1,0 +1,121 @@
+:root {
+    --color-primary-0: #991F2D;
+    --color-primary-1: #DC6B78;
+    --color-primary-2: #B63C4A;
+    --color-primary-3: #740613;
+    --color-primary-4: #4C0009;
+
+    --color-secondary-1-0: #9F7D20;
+    --color-secondary-1-1: #E6C56F;
+    --color-secondary-1-2: #BE9B3F;
+    --color-secondary-1-3: #795A06;
+    --color-secondary-1-4: #4F3900;
+
+    --color-tertiary-0: #391F6D;
+    --color-tertiary-1: #6D549D;
+    --color-tertiary-2: #4E3382;
+    --color-tertiary-3: #240C53;
+    --color-tertiary-4: #150436;
+
+    --color-quaternary-0: #F5F5F5;
+    --color-quaternary-1: #EBEBEB;
+    --color-quaternary-2: #DADADA;
+    --color-quaternary-3: #CACACA;
+    --color-quaternary-4: #B9B9B9;
+
+    overflow: hidden;
+}
+
+body {
+    background-color: var(--color-tertiary-4);
+    color: var(--color-quaternary-0)
+}
+
+#container {
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#main {
+    z-index: 5;
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.project {
+    position: fixed;
+    top: 50%;
+    z-index: 500;
+    width: 30%;
+    opacity: 0.2;
+    transition: opacity .2s, box-shadow .1s, border-radius .2s;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    height: auto;
+    border-radius: 10px;
+}
+
+#msc {
+    left: 23%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+#another-project {
+    right: 23%;
+    transform: translateY(-50%) translateX(50%);
+}
+
+.project:hover {
+    opacity: 1;
+    box-shadow: #240C53 0 0 25px;
+    border-radius: 20px;
+}
+
+.project:focus {
+    opacity: 1;
+    box-shadow: var(--color-primary-0) 0 0 25px;
+}
+
+.box {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-tertiary-1);
+    animation: box 25s linear infinite;
+    bottom: -200px;
+    transition: background-color .2s;
+    z-index: 0;
+}
+
+.box:hover {
+    background-color: var(--color-tertiary-2);
+}
+
+@keyframes box {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        border-radius: 10%;
+        opacity: .6;
+    }
+
+    100%{
+        transform: translateY(-120vh) rotate(720deg);
+        border-radius: 20%;
+        opacity: .4;
+    }
+}
+
+*::selection {
+    background-color: initial;
+    text-shadow: 0 0 5px #ff0000;
+    color:#ffbab8;
+}
