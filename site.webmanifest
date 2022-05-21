@@ -1,0 +1,15 @@
+{
+    "name": "Tomate0613",
+    "short_name": "Tomate0613",
+    "icons": [
+        {
+            "src": "/android-chrome-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "start_url": "https://tomate0613.github.io/",
+    "display": "standalone"
+}
