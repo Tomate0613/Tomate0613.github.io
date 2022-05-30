@@ -1,0 +1,57 @@
+:root {
+    overflow-y: auto;
+}
+
+.checkbox {
+    list-style:url('/resources/checkbox-G.png');
+}
+
+.checked {
+    list-style:url('/resources/checkbox-P.png');
+}
+
+code {
+    border-radius: 5px;
+    padding: 0px 2px 0px 2px;
+    background-color: var(--color-secondary-4);
+    cursor: pointer;
+}
+
+code::selection {
+    text-shadow: initial;
+    color: white;
+}
+
+code:hover {
+    background-color: var(--color-secondary-2);
+}
+
+code:active {
+    background-color: var(--color-secondary-1);
+}
+
+img {
+    margin: 20px;
+}
+
+h1 {
+    font-size:4rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+li {
+    font-size: 1.5rem;
+}
+
+img:focus {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: calc(100vw - 50rem);
+}
