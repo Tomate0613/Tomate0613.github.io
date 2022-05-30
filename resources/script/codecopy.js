@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded', () => document.querySelectorAll('code').forEach((element) => element.addEventListener('click', () => clientInformation.clipboard.writeText(element.innerText))));
