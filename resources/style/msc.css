@@ -3,11 +3,11 @@
 }
 
 .checkbox {
-    list-style:url('/resources/checkbox-G.png');
+    list-style-image: url('/resources/checkbox-G.png');
 }
 
 .checked {
-    list-style:url('/resources/checkbox-P.png');
+    list-style-image: url('/resources/checkbox-P.png');
 }
 
 code {
