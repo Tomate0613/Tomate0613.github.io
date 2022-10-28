@@ -73,12 +73,12 @@ body {
   }
 
 
-  #msc {
+  .project-left {
     left: 23%;
     transform: translateY(-50%) translateX(-50%);
   }
 
-  #another-project {
+  .project-right {
     right: 23%;
     transform: translateY(-50%) translateX(50%);
   }
