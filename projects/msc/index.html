@@ -1,72 +1,106 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Minecraft Server Control</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/resources/style/style.css">
-        <link rel="stylesheet" href="/resources/style/msc.css">
-        <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#da532c">
-        <script src="/resources/script/codecopy.js"></script>
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
-    </head>
-    <body>
-        <a href="/" id="back">⬅</a>
-        <div id="project-container">
-            <h1> mc-server-control </h1>
-            <p> Simple web UI for managing Minecraft servers </p>
 
-            <h3>Features</h3>
-            <ul>
-                <li class="checkbox checked">
-                    Start and stop Minecraft servers
-                    <br>
-                    <img src="screenshots/1.png"  width="500" tabindex="-1">
-                </li>
-                <li class="checkbox checked">
-                    Access to Minecraft server console
-                    <br>
-                    <img src="screenshots/2.png"  width="500" tabindex="-1">
-                </li>
-                <li class="checkbox checked">
-                    Manage Minecraft server plugins/mods
-                    <br>
-                    <img src="screenshots/3.png"  width="500" tabindex="-1">
-                </li>
-                <li class="checkbox">
-                    Manage Minecraft server configuration
-                </li>
-            </ul>
+<head>
+  <title>Minecraft Server Control</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/resources/style/style.css">
+  <link rel="stylesheet" href="/resources/style/msc.css">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#da532c">
+  <script src="/resources/script/codecopy.js"></script>
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <a href="/" id="back">⬅</a>
+  <div id="project-container">
+    <h1> mc-server-control </h1>
+    <p> Simple web UI for managing Minecraft servers </p>
+
+    <h3>Features</h3>
+    <ul>
+      <li class="checkbox checked">
+        Start and stop Minecraft servers
+        <br>
+        <img src="screenshots/1.png" width="500" tabindex="-1">
+      </li>
+      <li class="checkbox checked">
+        Access to Minecraft server console
+        <br>
+        <img src="screenshots/2.png" width="500" tabindex="-1">
+      </li>
+      <li class="checkbox checked">
+        Manage Minecraft server plugins/mods
+        <br>
+        <img src="screenshots/3.png" width="500" tabindex="-1">
+      </li>
+      <li class="checkbox checked">
+        Manage Minecraft server configuration
+      </li>
+    </ul>
 
 
-            <h3>Software</h3>
-            <ul>
-                <li class="checkbox checked">Vanilla</li>
-                <li class="checkbox checked">Fabric</li>
-                <li class="checkbox checked">Paper</li>
-            </ul>
+    <h3>Software</h3>
+    <ul>
+      <li class="checkbox checked">Vanilla</li>
+      <li class="checkbox checked">Fabric</li>
+      <li class="checkbox checked">Paper</li>
+    </ul>
+
+
+    <h3>Installation</h3>
+    <ol>
+      <li>Download latest release</li>
+      <li>Install <a href="https://nodejs.org/en/">nodejs</a></li>
+      <li>Run <code tabindex="-1">npm i</code></li>
+    </ol>
+
+
+    <h3>Usage</h3>
+    <ul>
+      <li>Run <code tabindex="-1">node server.js</code> or <code tabindex="-1">npm start</code></li>
+    </ul>
+
+    <a href="https://github.com/Tomate0613/mc-server-control">Project github page</a>
+    <br>&nbsp;
+  </div>
+
+  <script>
+    document.querySelectorAll('img').forEach((img) => {
+      img.addEventListener('click', () => {
+        const background = document.createElement('div');
+        background.className = 'background';
         
+        const popup = document.createElement('div');
+        popup.className = 'popup';
 
-            <h3>Installation</h3>
-            <ol>
-                <li>Download latest release</li>
-                <li>Install <a href="https://nodejs.org/en/">nodejs</a></li>
-                <li>Run <code tabindex="-1">npm i</code></li>
-            </ol>
-          
+        const close = document.createElement('div');
+        close.className = 'popup-close';
+        close.innerHTML = '&times;';
+        close.addEventListener('click', () => {
+          background.remove();
+        });
 
-            <h3>Usage</h3>
-            <ul>
-                <li>Run <code tabindex="-1">node server.js</code> or <code tabindex="-1">npm start</code></li>
-            </ul>
+        const image = document.createElement('img');
+        image.className = 'popup-image';
+        image.src = img.src;
 
-            <a href="https://github.com/Tomate0613/mc-server-control">Project github page</a>
-            <br>&nbsp;
-        </div>
-    </body>
+        popup.appendChild(close);
+        popup.appendChild(image);
+
+
+        background.appendChild(popup);
+
+        document.body.appendChild(background);
+      });
+    });
+  </script>
+</body>
+
 </html>
