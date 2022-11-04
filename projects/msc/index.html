@@ -1,106 +1,115 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Minecraft Server Control</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/resources/style/msc.css" />
 
-<head>
-  <title>Minecraft Server Control</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/resources/style/style.css">
-  <link rel="stylesheet" href="/resources/style/msc.css">
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#da532c">
-  <script src="/resources/script/codecopy.js"></script>
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-</head>
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/resources/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/resources/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/resources/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/resources/icons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/resources/icons/safari-pinned-tab.svg"
+      color="#da532c"
+    />
 
-<body>
-  <a href="/" id="back">⬅</a>
-  <div id="project-container">
-    <h1> mc-server-control </h1>
-    <p> Simple web UI for managing Minecraft servers </p>
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#da532c" />
+  </head>
 
-    <h3>Features</h3>
-    <ul>
-      <li class="checkbox checked">
-        Start and stop Minecraft servers
-        <br>
-        <img src="screenshots/1.png" width="500" tabindex="-1">
-      </li>
-      <li class="checkbox checked">
-        Access to Minecraft server console
-        <br>
-        <img src="screenshots/2.png" width="500" tabindex="-1">
-      </li>
-      <li class="checkbox checked">
-        Manage Minecraft server plugins/mods
-        <br>
-        <img src="screenshots/3.png" width="500" tabindex="-1">
-      </li>
-      <li class="checkbox checked">
-        Manage Minecraft server configuration
-      </li>
-    </ul>
+  <body>
+    <header>
+      <h1><a href="/" id="back">⬅</a>mc-server-control</h1>
+    </header>
 
+    <main>
+      <h2>Features</h2>
+      <div class="features">
+        <div>
+          Start and stop Minecraft servers
+          <br />
+          <img src="images/1.png" width="500" tabindex="-1" />
+        </div>
+        <div>
+          Access to Minecraft server console
+          <br />
+          <img src="images/2.png" width="500" tabindex="-1" />
+        </div>
+        <div>
+          Manage Minecraft server plugins/mods
+          <br />
+          <img src="images/3.png" width="500" tabindex="-1" />
+        </div>
+        <div>
+          Manage Minecraft server configuration
+          <br />
+          <img src="images/4.png" width="500" tabindex="-1" />
+        </div>
+      </div>
 
-    <h3>Software</h3>
-    <ul>
-      <li class="checkbox checked">Vanilla</li>
-      <li class="checkbox checked">Fabric</li>
-      <li class="checkbox checked">Paper</li>
-    </ul>
+      <h2>Software</h2>
+      <div class="software">
+        <li>Vanilla</li>
+        <li>Fabric</li>
+        <li>Paper</li>
+      </div>
 
+      <h2>Installation</h2>
+      <div class="installation">
+        <li>Download latest release</li>
+        <li>Install <a href="https://nodejs.org/en/">nodejs</a></li>
+        <li>Run <code tabindex="-1">npm i</code></li>
+      </div>
 
-    <h3>Installation</h3>
-    <ol>
-      <li>Download latest release</li>
-      <li>Install <a href="https://nodejs.org/en/">nodejs</a></li>
-      <li>Run <code tabindex="-1">npm i</code></li>
-    </ol>
+      <h2>Usage</h2>
+      <div class="usage">
+        Run <code tabindex="-1">node server.js</code> or
+        <code tabindex="-1">npm start</code>
+      </div>
+    </main>
 
+    <script>
+      document.querySelectorAll("img").forEach((img) => {
+        img.addEventListener("click", () => {
+          const imageViewer = document.createElement("div");
+          imageViewer.className = "img-viewer";
 
-    <h3>Usage</h3>
-    <ul>
-      <li>Run <code tabindex="-1">node server.js</code> or <code tabindex="-1">npm start</code></li>
-    </ul>
+          const image = document.createElement("img");
+          image.src = img.src;
 
-    <a href="https://github.com/Tomate0613/mc-server-control">Project github page</a>
-    <br>&nbsp;
-  </div>
+          imageViewer.appendChild(image);
 
-  <script>
-    document.querySelectorAll('img').forEach((img) => {
-      img.addEventListener('click', () => {
-        const background = document.createElement('div');
-        background.className = 'background';
-        
-        const popup = document.createElement('div');
-        popup.className = 'popup';
+          document.body.appendChild(imageViewer);
+          let u = 0;
 
-        const close = document.createElement('div');
-        close.className = 'popup-close';
-        close.innerHTML = '&times;';
-        close.addEventListener('click', () => {
-          background.remove();
+          const clickHandler = () => {
+            u++;
+            if (u < 2) return;
+
+            imageViewer.remove();
+            document.removeEventListener("click", clickHandler);
+          };
+
+          document.addEventListener("click", clickHandler);
         });
-
-        const image = document.createElement('img');
-        image.className = 'popup-image';
-        image.src = img.src;
-
-        popup.appendChild(close);
-        popup.appendChild(image);
-
-
-        background.appendChild(popup);
-
-        document.body.appendChild(background);
       });
-    });
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
