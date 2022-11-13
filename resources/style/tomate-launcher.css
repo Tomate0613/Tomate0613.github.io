@@ -5,7 +5,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
-  background: url("/projects/tomate-launcher/images/banner.png") no-repeat
+  background: url("/projects/tomate-launcher/images/banner.webp") no-repeat
     center center fixed;
   background-size: cover;
 }
@@ -18,7 +18,7 @@ header {
   top: 0px;
 
   width: 100%;
-  height: auto;
+  height: 3rem;
 
   background-color: black;
   box-shadow: 2px 0 10px black;
@@ -94,15 +94,15 @@ header a:focus {
   display: flex;
   flex-direction: column;
 
-  justify-content: center;
   align-items: center;
+  padding-top: 4rem;
 
   background-color: black;
   border-top: 2px solid blue;
 
-  height: 50vh;
+  min-height: calc(100vh - 390px - 20rem);
 
-  animation: fade 1s ease;
+  animation: slide2 1s ease, fade3 1s;
   animation-fill-mode: forwards;
 }
 
@@ -175,9 +175,27 @@ header a:focus {
   }
 }
 
+@keyframes fade3 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes slide {
   0% {
     transform: translateY(20vh);
+  }
+  100% {
+    transform: translateY(0vh);
+  }
+}
+
+@keyframes slide2 {
+  0% {
+    transform: translateY(100vh);
   }
   100% {
     transform: translateY(0vh);

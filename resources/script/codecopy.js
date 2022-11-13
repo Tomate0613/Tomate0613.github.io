@@ -1,1 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => document.querySelectorAll('code').forEach((element) => element.addEventListener('click', () => clientInformation.clipboard.writeText(element.innerText))));
+document
+  .querySelectorAll("code")
+  .forEach((element) =>
+    element.addEventListener("click", () =>
+      navigator.clipboard.writeText(element.textContent)
+    )
+  );

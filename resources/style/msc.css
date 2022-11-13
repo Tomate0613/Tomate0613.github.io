@@ -6,6 +6,7 @@ body {
   margin: 0;
 
   overflow-x: hidden;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* Header */
@@ -58,7 +59,18 @@ main {
 
 .features div {
   margin: 1rem;
+  padding: 1rem;
+
   text-align: center;
+
+  background-color: #0f0f0f;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.features img {
+  margin: 1rem;
 }
 
 .installation li {
