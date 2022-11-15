@@ -125,8 +125,7 @@ header a:focus {
 
   background-color: transparent;
 
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px;
 
   color: white;
   padding: 10px 30px;
@@ -199,5 +198,41 @@ header a:focus {
   }
   100% {
     transform: translateY(0vh);
+  }
+}
+
+@media screen and (max-width: 612px) {
+  #quick-links {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  #hero-heading {
+    font-size: 10vw;
+  }
+
+  #hero-section {
+    padding-top: 50px;
+    padding-bottom: calc(50px);
+  }
+
+  #hero-subheading {
+    font-size: 4vw;
+  }
+
+  #details {
+    min-height: calc(100vh - 50px - 20rem);
+  }
+}
+
+@media screen and (max-width: 1910px) {
+  #images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #images img {
+    width: 90%;
   }
 }
