@@ -11,23 +11,26 @@ body {
 }
 
 header {
-  display: flex;
+  /* display: flex; */
   flex-direction: row;
 
-  position: sticky;
-  top: 0px;
+  /* position: sticky; */
+  /* top: 0px; */
 
   width: 100%;
   height: 3rem;
 
-  background-color: black;
-  box-shadow: 2px 0 10px black;
+  /* background-color: #1e272b2d; */
+  box-shadow: 2px 0 10px #202020b4;
+  backdrop-filter: blur(7px);
+
 
   padding-top: 10px;
   padding-bottom: 10px;
 
   z-index: 1000;
 }
+
 
 header h1 {
   margin: 0;
@@ -38,6 +41,8 @@ header a {
   color: white;
   margin-left: 1rem;
   margin-right: 1rem;
+
+
 }
 
 header a:hover,
@@ -93,17 +98,22 @@ header a:focus {
 #details {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background-color: #181818;
+  box-shadow: -2px 0 10px #20202038;
+  /* backdrop-filter: blur(7px); */
+  /* border-top: 2px solid #4747cf; */
+  min-height: calc(100vh - 390px - 20rem);
+  animation: slide2 1s ease, fade3 1s;
+  animation-fill-mode: forwards;
+}
+
+#details section {
+  display: flex;
+  flex-direction: column;
 
   align-items: center;
   padding-top: 4rem;
-
-  background-color: black;
-  border-top: 2px solid blue;
-
-  min-height: calc(100vh - 390px - 20rem);
-
-  animation: slide2 1s ease, fade3 1s;
-  animation-fill-mode: forwards;
 }
 
 #images {
@@ -235,4 +245,17 @@ header a:focus {
   #images img {
     width: 90%;
   }
+}
+
+.preview iframe {
+  aspect-ratio: 16/9;
+  width: min(90vw, 70rem);
+
+  border: none;
+  margin: 1rem;
+  box-shadow: 0 0 100px black;
+}
+
+.preview .preview-description {
+  text-align: center;
 }
