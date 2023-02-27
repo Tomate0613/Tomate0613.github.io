@@ -1,9 +1,19 @@
 @import url('./colors.css');
 
+@font-face {
+  font-family: 'Grandstander';
+  src: url('/resources/Grandstander-VariableFont_wght.ttf');
+}
 body {
   background-color: var(--color-tertiary-4);
   color: var(--color-quaternary-0);
   margin: 0;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+h1 {
+  font-family: 'Grandstander';
 }
 
 @media screen and (min-width: 1500px) {
