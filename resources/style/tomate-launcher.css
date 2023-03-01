@@ -254,6 +254,7 @@ header a:focus {
   border: none;
   margin: 1rem;
   box-shadow: 0 0 100px black;
+  border-radius: .25rem;
 }
 
 .preview .preview-description {
