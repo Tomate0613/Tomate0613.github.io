@@ -1,71 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Hello World!</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/resources/style/style.css" />
-    <script src="/resources/script/index.js" type="module"></script>
-    <script src="/resources/script/excuses.js" type="module"></script>
 
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="/resources/icons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/resources/icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/resources/icons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="/resources/icons/safari-pinned-tab.svg"
-      color="#da532c"
-    />
+<head>
+  <title>Hello World!</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/resources/style/style.css" />
+  <script src="/resources/script/index.js" type="module"></script>
+  <script src="/resources/script/excuses.js" type="module"></script>
 
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#da532c" />
-  </head>
+  <link rel="apple-touch-icon" sizes="76x76" href="/resources/icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/resources/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/resources/icons/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/resources/icons/safari-pinned-tab.svg" color="#da532c" />
 
-  <body>
-    <div id="container">
-      <div id="main">
-        <h1>Hello World!</h1>
-        <p>This is a simple web page.</p>
-        <div id="quote"></div>
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#da532c" />
+</head>
+
+<body>
+  <div id="container">
+    <div id="main">
+      <h1>Hello World!</h1>
+      <p>This is a simple web page.</p>
+      <div id="dev-excuse">
+        Could not load dev excuse
       </div>
-      <a
-        id="msc"
-        class="project project-left"
-        tabindex="0"
-        data-folder="/projects/msc/images"
-        data-start="1"
-        data-stop="4"
-        href="/projects/msc/"
-      >
-        <img width="100%" class="image" />
-      </a>
-
-      <a
-        id="tomate-launcher"
-        class="project project-right"
-        tabindex="0"
-        data-folder="/projects/tomate-launcher/images"
-        data-start="1"
-        data-stop="1"
-        href="/projects/tomate-launcher/"
-      >
-        <img width="100%" class="image" />
-      </a>
     </div>
-  </body>
+    <a id="msc" class="project project-left" tabindex="0" data-folder="/projects/msc/images" data-start="1"
+      data-stop="4" href="/projects/msc/">
+      <img width="100%" class="image" />
+    </a>
+
+    <a id="tomate-launcher" class="project project-right" tabindex="0" data-folder="/projects/tomate-launcher/images"
+      data-start="1" data-stop="1" href="/projects/tomate-launcher/">
+      <img width="100%" class="image" />
+    </a>
+  </div>
+</body>
+
 </html>

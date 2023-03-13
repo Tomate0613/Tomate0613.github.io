@@ -4,6 +4,6 @@ const randomQuote = () => excuses.developers.getRandom();
 
 
 setInterval(() => {
-  document.getElementById('quote').innerHTML = randomQuote();
+  document.getElementById('dev-excuse').innerHTML = randomQuote();
 }, 5000);
-document.getElementById('quote').innerHTML = randomQuote();
+document.getElementById('dev-excuse').innerHTML = randomQuote();
