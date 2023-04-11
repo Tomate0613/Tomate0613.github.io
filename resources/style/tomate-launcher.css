@@ -82,6 +82,8 @@ header a:focus {
 #hero-heading {
   font-size: 7rem;
   text-shadow: 1px 1px 10px black;
+  margin: 0;
+  font-weight: 100;
 }
 
 #hero-subheading {
