@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Hello World!</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="/resources/script/excuses.js" type="module"></script>
+  <link rel="apple-touch-icon" sizes="76x76" href="/resources/icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/resources/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/resources/icons/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/resources/icons/safari-pinned-tab.svg" color="#da532c" />
+  <link rel="stylesheet" href="resources/style/i2.css" />
+
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#da532c" />
+</head>
+
+<body>
+  <div id="background">
+    <div id="blob-container-text">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+
+  </div>
+
+  <main id="console">
+    <h1>Tomate0613</h1>
+
+    <div>
+      > instructions
+      <div>use the tab key</div>
+    </div>
+    <div>
+      > time
+      <div id="time">TIME</div>
+      <script>
+        setInterval(() => {
+          document.getElementById('time').innerText = new Date();
+        }, 1000);
+      </script>
+    </div>
+    <div>
+      > nav
+      <nav>
+        <a href="projects/tomate-launcher/" autofocus>Tomate Launcher</a>
+        <a href="projects/tomate-launcher/">MCSC</a>
+        <a href="projects/tomate-launcher/">Tomate Client</a>
+      </nav>
+    </div>
+    <div>
+      > devexcuse
+      <div id="dev-excuse">Could not load dev excuse</div>
+    </div>
+    <div>
+      > <span id="input"></span><span id="cursor">▉</span>
+      <div id="output">Hello World!</div>
+    </div>
+  </main>
+</body>
+
+<script>
+  const texts = [
+    `console.log('Hello World!');`,
+    `print("Hello World!")`,
+    `System.out.prinln("Hello World!");`,
+    `std::cout << "Hello World!"  << std::endl;`,
+    `Console.WriteLine("Hello World!");`,
+    `println!("Hello World!");`,
+    `printf("Hello World!\\n");`,
+    `puts "Hello World!";`,
+    `echo 'Hello World!';`,
+    `Console.WriteLine("Hello World!");`,
+    `Serial.println("Hello World!");`,
+    `print('Hello World!')`,
+    `logger.info('Hello World!');`,
+    `NSLog(@"Hello World!");`,
+    `console.debug('Hello World!');`,
+    `(;Hello, World!;)`,
+    `X="Hello World!"print X`,
+    `Hello-World!`,
+    `H3ll0_W0r1d!`,
+    `++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>+.+++++++..+++.>>.++.<-.<.+++.------.--------.>>+.>++.`,
+    `48 65 6c 6c 6f 20 57 6f 72 6c 64 21`,
+    `55 8B EC 6A 0A 68 00 00 00 00 E8 00 00 00 00 58 83 C4 04 C3`,
+    `Hello, World!`,
+    `Hello_World`,
+    `Hello World!%`,
+    `!dlroW olleH>:#,_@`,
+    `say Hello World!`,
+    `puts "Hello World!"`,
+    `fmt.print.Println("Hello World!")`,
+    `cat("Hello World!")`,
+    `disp('Hello World!')`
+  ];
+
+  const input = document.getElementById('input');
+  const output = document.getElementById('output');
+
+  let currentText = texts[0];
+  let text = 'Hello World!';
+
+  const setText = (t) => {
+    input.innerText = t;
+    output.style.display = (t === currentText) ? 'block' : 'none';
+    text = t;
+  }
+
+  const q = setInterval(() => {
+    if (currentText === text) {
+      if (Math.random() > 0.07)
+        return;
+
+      currentText = texts.sort(() => Math.random() - 0.5)[0];
+      return;
+    }
+
+    for (let i = 1; i <= text.length; i++) {
+      if (text[text.length - i] !== currentText[text.length - i]) {
+        if (Math.random() > 0.8)
+          return;
+
+        setText(text.substring(0, text.length - 1));
+        return;
+      }
+    }
+
+    if (Math.random() > 0.5)
+      return;
+
+    setText(text + currentText[text.length]);
+  }, 50);
+
+  let active = true;
+  document.addEventListener('keydown', (event) => {
+    if (active) {
+      if (event.key === 'c' && event.ctrlKey) {
+        active = false;
+        clearInterval(q);
+      }
+
+      return;
+    }
+
+    console.log(event);
+
+    if (event.key.length === 1)
+      setText(text + event.key);
+    else if (event.key === 'Backspace')
+      setText(text.slice(0, -1))
+    else if (event.key === 'Enter') {
+      event.preventDefault();
+      if (text === 'nvim') {
+        document.location.href = '/experiments/nvim.html';
+      } else if (text === 'code') {
+        document.location.href = '//vscode.dev';
+      } else if (text === 'help') {
+        alert('Run "nvim", "code" or "help"');
+        setText('');
+      } else {
+        setText('');
+      }
+    }
+
+  })
+</script>
+
+
+</html>

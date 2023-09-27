@@ -4,6 +4,7 @@
   font-family: 'Grandstander';
   src: url('/resources/Grandstander-VariableFont_wght.ttf');
 }
+
 body {
   background-color: var(--color-tertiary-4);
   color: var(--color-quaternary-0);
@@ -34,20 +35,23 @@ h1 {
     font-size: 2rem;
   }
 
+  #projects {
+    display: flex;
+  }
+
   .project {
     z-index: 500;
     width: 30%;
-    transition: box-shadow .1s, border-radius .2s;
+    transition: box-shadow 0.1s, border-radius 0.2s;
     margin: 0;
     padding: 0;
     overflow: hidden;
     display: flex;
     height: auto;
     border-radius: 10px;
-    position: fixed;
+    position: relative;
     top: 50%;
   }
-
 
   .project-left {
     left: 23%;
@@ -60,7 +64,7 @@ h1 {
   }
 
   .project:hover {
-    box-shadow: #240C53 0 0 25px;
+    box-shadow: #240c53 0 0 25px;
     border-radius: 20px;
   }
 
@@ -68,7 +72,6 @@ h1 {
     box-shadow: var(--color-primary-0) 0 0 25px;
     outline: 0;
   }
-
 
   #dev-excuse {
     width: 20vw;
@@ -80,7 +83,7 @@ h1 {
   .project {
     position: relative;
     z-index: 500;
-    transition: box-shadow .1s, border-radius .2s;
+    transition: box-shadow 0.1s, border-radius 0.2s;
     margin: 5px;
     padding: 0;
     overflow: hidden;
@@ -90,7 +93,7 @@ h1 {
   }
 
   .project:hover {
-    box-shadow: #240C53 0 0 25px;
+    box-shadow: #240c53 0 0 25px;
     border-radius: 20px;
   }
 
@@ -112,7 +115,7 @@ h1 {
   background-color: var(--color-tertiary-1);
   animation: box 25s linear infinite;
   bottom: -200px;
-  transition: background-color .2s;
+  transition: background-color 0.2s;
   z-index: 0;
 }
 
@@ -138,12 +141,12 @@ a:hover {
   0% {
     transform: translateY(0) rotate(0deg);
     border-radius: 10%;
-    opacity: .6;
+    opacity: 0.6;
   }
 
   100% {
     transform: translateY(-120vh) rotate(720deg);
     border-radius: 20%;
-    opacity: .4;
+    opacity: 0.4;
   }
 }

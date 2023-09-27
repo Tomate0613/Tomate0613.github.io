@@ -6,16 +6,15 @@ for (let i = 0; i < 100; i++) {
   u.style.animationDuration = `${Math.random() * 15 + 15}s`;
   u.style.left = `${i}vw`;
 
-  document.getElementById("container").appendChild(u);
+  document.getElementById('particles').appendChild(u);
 }
 
 //Projects
 const projects = document.getElementsByClassName("project");
 
 const randomImage = (folder, start, stop) => {
-  return `${folder}/${
-    Math.floor(Math.random() * (stop - start + 1)) + start
-  }.png`;
+  return `${folder}/${Math.floor(Math.random() * (stop - start + 1)) + start
+    }.png`;
 }
 
 document.querySelectorAll(".project").forEach((project) => {
