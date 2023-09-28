@@ -1,0 +1,157 @@
+/* Forground */
+.ansi-30 {
+  background-color: #4e5058;
+}
+.ansi-31 {
+  background-color: #dc322f;
+}
+.ansi-32 {
+  background-color: #859900;
+}
+.ansi-33 {
+  background-color: #b58900;
+}
+.ansi-34 {
+  background-color: #268bd2;
+}
+.ansi-35 {
+  background-color: #d33682;
+}
+.ansi-36 {
+  background-color: #2aa198;
+}
+.ansi-37 {
+  background-color: #ffffff;
+}
+
+.ansi-fg-30 {
+  color: #4e5058;
+}
+.ansi-fg-31 {
+  color: #dc322f;
+}
+.ansi-fg-32 {
+  color: #859900;
+}
+.ansi-fg-33 {
+  color: #b58900;
+}
+.ansi-fg-34 {
+  color: #268bd2;
+}
+.ansi-fg-35 {
+  color: #d33682;
+}
+.ansi-fg-36 {
+  color: #2aa198;
+}
+.ansi-fg-37 {
+  color: #ffffff;
+}
+
+/* Background */
+.ansi-40 {
+  background-color: #002b36;
+}
+.ansi-41 {
+  background-color: #cb4b16;
+}
+.ansi-42 {
+  background-color: #586e75;
+}
+.ansi-43 {
+  background-color: #657b83;
+}
+.ansi-44 {
+  background-color: #839496;
+}
+.ansi-45 {
+  background-color: #6c71c4;
+}
+.ansi-46 {
+  background-color: #93a1a1;
+}
+.ansi-47 {
+  background-color: #fdf6e3;
+}
+
+.ansi-2 {
+  font-weight: bold;
+}
+
+.ansi-4 {
+  text-decoration: underline 1px solid;
+}
+
+/* CLEAR */
+.ansi-clear {
+  background: var(--background-text-field);
+  color: var(--text);
+
+  font-weight: normal;
+  text-decoration: underline 1px solid var(--background-text-field);
+}
+
+button {
+  width: auto;
+
+  height: 32px;
+  min-width: 60px;
+
+  padding: 2px 16px 2px 16px;
+  border-radius: 3px;
+
+  border: none;
+
+  margin-left: 1rem;
+
+  background: #5865f2;
+  color: #fff;
+}
+
+#btn:hover {
+  background: #4752c4;
+}
+
+#btn:active {
+  background: #3c45a5;
+}
+
+*::selection {
+  background-color: inherit;
+  color: inherit;
+  text-shadow: 0 0 5px red;
+  background: #0066ff;
+}
+
+#ansi {
+  display: inline-block;
+  border: 1px solid #1e1f22;
+  border-radius: 2px;
+  padding: 7px;
+  background: var(--background-text-field);
+  min-width: 1580px;
+}
+
+:root {
+  --background-text-field: #2b2d31;
+  --background: #313338;
+  --text: #fff;
+
+  background: var(--background);
+  color: var(--text);
+  font-family: Consolas;
+}
+
+h1,
+#fg,
+#bg,
+#effects,
+#cls,
+#input-row {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+  margin-top: 1rem;
+}

@@ -5,7 +5,7 @@
   <title>Hello World!</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="/resources/style/style2.css" />
+  <link rel="stylesheet" href="./style.css" />
   <script src="/resources/script/index.js" type="module"></script>
   <script src="/resources/script/excuses.js" type="module"></script>
 
@@ -21,17 +21,18 @@
 
 <body>
   <div id="container">
-    <a id="msc" class="project project-left" tabindex="0" data-folder="/projects/msc/images" data-start="1"
-      data-stop="4" href="/projects/msc/">
+    <a class="project project-left image-cycle" tabindex="0" data-folder="/total-dragon/images"
+      data-times="6000,12000,2200,1600" data-start="1" data-stop="4" data-filetype="webp"
+      href="//modrinth.com/mod/total-dragon">
       <img width="100%" class="image" />
       <div class="project-overlay">
-        <div class="project-name">Minecraft server control</div>
-        <div class="project-description">DO NOT USE THIS</div>
+        <div class="project-name">Total Dragon</div>
+        <div class="project-description">A fabric mod impoving minecraft's end fight 🐲</div>
       </div>
     </a>
 
     <div id="main">
-      <a class="no-deco" href="./cmd.html">
+      <a class="no-deco" href="./cmd">
         <h1>Hello World!</h1>
       </a>
       <p>This is a simple web page.</p>
@@ -39,9 +40,8 @@
     </div>
 
 
-    <a id="tomate-launcher" class="project project-right" tabindex="0" data-folder="/projects/tomate-launcher/images"
-      data-start="1" data-stop="1" href="/projects/tomate-launcher/">
-      <img width="100%" class="image" />
+    <a class="project project-right" tabindex="0" href="/tomate-launcher">
+      <img src="/tomate-launcher/images/banner.webp" width="100%" class="image" />
 
       <div class="project-overlay">
         <div class="project-name">Tomate Launcher</div>
