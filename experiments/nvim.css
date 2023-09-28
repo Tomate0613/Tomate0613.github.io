@@ -1,0 +1,253 @@
+@font-face {
+  font-family: 'Caskaydia';
+  src: url('./caskaydia.otf');
+}
+
+:root {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  background: #1e222a;
+  color: white;
+
+  margin: 0;
+  font-family: 'Caskaydia';
+
+  height: 100%;
+  width: 100%;
+}
+
+#nvim-top {
+  display: flex;
+  flex-direction: row;
+  height: 90%;
+}
+
+#nvim-tree {
+  background: #1b1f27;
+
+  width: 18rem;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 10px;
+
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.nvim-tree-item {
+  color: #abb2bf;
+  user-select: none;
+}
+
+.nvim-tree-folder {
+  color: #61afef;
+}
+
+.nvim-tree-folder::before {
+  content: '  ';
+}
+
+.nvim-tree-folder-wrapper.open > .nvim-tree-folder::before {
+  content: '  ';
+}
+
+.nvim-tree-item:focus {
+  background: #252931;
+}
+
+.nvim-tree-item:focus::before {
+  background: white;
+}
+
+.nvim-tree-folder-contents {
+  display: none;
+  padding-left: 21px;
+}
+
+.nvim-tree-folder-wrapper.open > .nvim-tree-folder-contents {
+  display: block;
+}
+
+.nvim-tree-file::before {
+  content: '⠀⠀ ';
+}
+
+/* statusbar */
+#nvim-statusbar,
+#nvim-statusbar * {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  background: #22262e;
+  user-select: none;
+}
+
+#nvim-statusbar div,
+#nvim-statusbar span {
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+#nvim-statusbar .t {
+  color: var(--color-background);
+  background: var(--color-text);
+}
+
+#nvim-s-mode,
+#nvim-s-mode #nvim-s-mode-text {
+  --color-text: #1e222a;
+  --color-background: #81a1c1;
+}
+
+#nvim-s-mode.insert,
+#nvim-s-mode.insert #nvim-s-mode-text {
+  --color-background: #c882e7;
+}
+
+#nvim-s-mode.command,
+#nvim-s-mode.command #nvim-s-mode-text {
+  --color-background: #98c379;
+}
+
+#nvim-s-mode .t {
+  --color-text: #42464e;
+}
+
+#nvim-s-transition {
+  --color-background: #42464e;
+  --color-text: #2d3139;
+}
+
+#nvim-s-file {
+  --color-background: #2d3139;
+  --color-text: #abb2bf;
+}
+
+#nvim-s-file .t {
+  --color-text: #22262e;
+}
+
+#nvim-s-git {
+  --color-background: #22262e;
+  --color-text: #6f737b;
+}
+
+#nvim-s-folder {
+  --color-background: #282c34;
+  --color-text: #e06c75;
+}
+
+#nvim-s-folder .a {
+  --color-text: #abb2bf;
+}
+
+#nvim-s-read {
+  --color-background: #282c34;
+  --color-text: #98c379;
+}
+
+#nvim-s-messages {
+  --color-text: #81a1c1;
+}
+
+#nvim-s-errors {
+  --color-text: #d76971;
+}
+
+#nvim-s-right {
+  position: absolute;
+  right: 0;
+
+  display: flex;
+}
+
+#nvim-commands {
+  background-color: #1e222a;
+}
+
+#nvim-center {
+  width: 100%;
+}
+
+#nvim-content {
+  outline: none;
+}
+
+#nvim-content div {
+  counter-increment: lineno;
+  color: #abb2bf;
+}
+
+#nvim-content div:focus-within {
+  color: red !important;
+}
+
+#nvim-content div::before {
+  content: counter(lineno);
+  color: #42464e;
+  padding-right: 10px;
+  display: inline-block;
+  min-width: 2.5rem;
+  text-align: end;
+}
+
+#nvim-titlebar {
+  background: #252931;
+  display: flex;
+
+  position: relative;
+  width: 100%;
+}
+
+#nvim-titlebar-right {
+  position: absolute;
+  right: 0;
+}
+
+#nvim-titlebar-items {
+  display: flex;
+}
+
+.nvim-titlebar-item {
+  padding-left: 80px;
+  padding-right: 80px;
+
+  display: flex;
+  position: relative;
+  color: #545862;
+}
+
+.nvim-titlebar-item.active {
+  background: #1e222a;
+  color: #abb2bf;
+}
+
+.nvim-titlebar-item .close {
+  position: absolute;
+  right: 10px;
+}
+
+.nvim-titlebar-item.active .close {
+  color: #e06c75;
+}
+
+.nvim-titlebar-item.changed .close {
+  color: #98c379;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+  outline: none;
+}

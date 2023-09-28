@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neovim</title>
+  <script src="./eventEmitter.js"></script>
+  <script src="./nvim.js"></script>
+  <link rel="stylesheet" href="./nvim.css">
+</head>
+
+<body>
+  <div id="nvim-top">
+    <div id="nvim-tree">
+
+    </div>
+    <div id="nvim-center">
+      <div id="nvim-titlebar">
+        <div id="nvim-titlebar-items"><!-- mappings.lua   default_config..   HEAD --></div>
+        <div id="nvim-titlebar-right">  </div>
+      </div>
+      <div id="nvim-content"></div>
+    </div>
+  </div>
+
+  <div id="nvim-bottom">
+    <div id="nvim-statusbar">
+      <div id="nvim-s-mode">&nbsp;&nbsp;<span id="nvim-s-mode-text">NORMAL</span><span class="t"></span></div>
+      <div id="nvim-s-transition">&nbsp;<span class="t"></span></div>
+      <div id="nvim-s-file">&nbsp;&nbsp;&nbsp; mappings.lua&nbsp;<span class="t"></span></div>
+      <div id="nvim-s-git">&nbsp; v2.0  1</div>
+      <div id="nvim-s-right">
+        <div id="nvim-s-messages">
+          <div id="nvim-s-errors">&nbsp; 6&nbsp;</div> LSP ~ lua_ls
+        </div>
+        <div id="nvim-s-info">&nbsp;
+          <div id="nvim-s-folder">
+            
+            <div class="t">&nbsp;</div>
+            <div class="a">&nbsp;nvim&nbsp;</div>
+          </div>
+          <div id="nvim-s-read">
+            
+            <div class="t">&nbsp;</div>
+            &nbsp;96%&nbsp;
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div id="nvim-commands"></div>
+  </div>
+</body>
+
+</html>
