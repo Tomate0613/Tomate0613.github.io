@@ -103,9 +103,14 @@ h1 {
   margin-bottom: 2rem;
 }
 
-nav a {
+nav a,
+#back {
   color: #fff;
   text-decoration: none;
+}
+
+#back:hover {
+  color: #b9b9b9;
 }
 
 nav a::before {
