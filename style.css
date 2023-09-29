@@ -44,6 +44,8 @@ a.no-deco {
   margin: 0;
   font-size: 2rem;
   text-align: center;
+
+  margin-bottom: 5rem;
 }
 
 @media screen and (max-width: 1500px) {
