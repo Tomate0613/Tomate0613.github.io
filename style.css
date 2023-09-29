@@ -28,14 +28,14 @@ a.no-deco {
 
 #container {
   text-align: center;
-  align-items: center;
-  height: 100%;
+  align-items: flex-start;
 
   padding-left: 10rem;
   padding-right: 10rem;
 
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 #main {
@@ -43,8 +43,10 @@ a.no-deco {
   padding: 0;
   margin: 0;
   font-size: 2rem;
+  text-align: center;
 }
 
+/*
 @media screen and (max-width: 1500px) {
   #container {
     padding-left: 1rem;
@@ -58,7 +60,7 @@ a.no-deco {
   #main {
     display: none;
   }
-}
+}*/
 
 .project {
   z-index: 500;
