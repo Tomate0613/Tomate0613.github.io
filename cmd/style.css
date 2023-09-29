@@ -6,8 +6,6 @@
 :root {
   outline: none;
   user-select: none;
-
-  overflow-x: hidden;
 }
 
 body {
@@ -26,6 +24,7 @@ body {
 
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 #blob-container-text {
@@ -111,8 +110,31 @@ nav a,
   text-decoration: none;
 }
 
-#back:hover {
+#back {
+  position: relative;
+  transition: padding 1s;
+}
+
+#back:before {
+  content: '<';
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: transform 0.3s 0.1s, opacity 1s;
+  transform: scaleX(0);
+}
+
+#back:hover,
+#back:focus {
   color: #b9b9b9;
+  outline: none;
+  padding-left: 4rem;
+}
+
+#back:focus::before,
+#back:hover::before {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 nav a::before {
