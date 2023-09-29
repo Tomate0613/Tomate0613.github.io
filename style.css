@@ -35,7 +35,7 @@ a.no-deco {
 
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
 }
 
 #main {
@@ -46,21 +46,14 @@ a.no-deco {
   text-align: center;
 }
 
-/*
 @media screen and (max-width: 1500px) {
   #container {
     padding-left: 1rem;
     padding-right: 1rem;
 
-    display: grid;
-    grid-template-columns: none;
-    grid-template-rows: 40% 40% !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
-
-  #main {
-    display: none;
-  }
-}*/
+}
 
 .project {
   z-index: 500;
