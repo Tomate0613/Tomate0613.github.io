@@ -6,6 +6,8 @@
 :root {
   outline: none;
   user-select: none;
+
+  overflow-x: hidden;
 }
 
 body {
