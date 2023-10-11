@@ -110,6 +110,7 @@ header a:focus {
 
   align-items: center;
   padding-top: 4rem;
+  max-width: 100rem;
 }
 
 #images {
@@ -255,4 +256,18 @@ header a:focus {
 
 .preview .preview-description {
   text-align: center;
+}
+
+#packages {
+  margin-top: 0.5rem;
+}
+
+#packages a {
+  color: #ff7f7e;
+  text-decoration: none;
+}
+
+#packages a:hover,
+a:focus {
+  color: #ff7e7ea8;
 }
