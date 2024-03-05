@@ -1,0 +1,181 @@
+@import url('/resources/style/colors.css');
+
+@font-face {
+  font-family: 'Grandstander';
+  src: url('/resources/Grandstander-VariableFont_wght.ttf');
+}
+
+:root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-tertiary-4);
+  color: var(--color-quaternary-0);
+  margin: 0;
+  font-family: sans-serif;
+  font-weight: 100;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: 'Grandstander';
+  margin: 0;
+  padding-top: 2rem;
+}
+
+a.no-deco {
+  text-decoration: none;
+}
+
+#mods {
+  text-align: center;
+  align-items: flex-start;
+
+  padding-left: 10rem;
+  padding-right: 10rem;
+
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+}
+
+#main {
+  z-index: 5;
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+
+  margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 1500px) {
+  #mods {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+.mod {
+  z-index: 500;
+  width: 100%;
+  height: 30rem;
+
+  transition:
+    box-shadow 0.1s,
+    border-radius 0.2s;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  border-radius: 10px;
+  position: relative;
+}
+
+.mod img {
+  height: auto;
+  object-fit: cover;
+}
+
+.mod-overlay {
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 100%;
+  height: 5rem;
+
+  transition: all 1s;
+  background-image: linear-gradient(transparent, #000000df);
+}
+
+.mod-overlay .mod-name {
+  font-size: 2rem;
+  transition: all 1s;
+  margin-bottom: 0;
+}
+
+.mod-overlay .mod-description {
+  color: var(--color-quaternary-4);
+  transition: all 1s;
+}
+
+.mod:hover .mod-overlay {
+  height: 100%;
+}
+
+.mod:hover .mod-name {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: var(--color-quaternary-0);
+}
+
+.mod:hover .mod-description {
+  color: var(--color-quaternary-0);
+}
+
+.mod:hover {
+  box-shadow: #240c53 0 0 25px;
+  border-radius: 20px;
+}
+
+.mod:focus {
+  box-shadow: var(--color-primary-0) 0 0 25px;
+  outline: 0;
+}
+
+*::selection {
+  background-color: initial;
+  text-shadow: 0 0 5px #ff0000;
+  color: #ffbab8;
+}
+
+.box {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-tertiary-1);
+  animation: box 25s linear infinite;
+  bottom: -200px;
+  transition: background-color 0.2s;
+  z-index: -10;
+}
+
+.box:hover {
+  background-color: var(--color-tertiary-2);
+}
+
+a {
+  color: var(--color-quaternary-0);
+}
+
+a:hover {
+  color: var(--color-quaternary-4);
+}
+
+#back {
+  position: fixed;
+  font-size: 5rem;
+  text-decoration: none;
+}
+
+@keyframes box {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    border-radius: 10%;
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translateY(-120vh) rotate(720deg);
+    border-radius: 20%;
+    opacity: 0.4;
+  }
+}

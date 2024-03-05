@@ -242,8 +242,15 @@ const commands = {
       contentNode.focus();
     }, 1);
   },
+  I: () => commands.i,
   ':help': () => 'No help for you :ferris:',
-  ':run': () => eval(fileStructure.src['index.js']),
+  ':run': () => {
+    try {
+      return eval(fileStructure.src['index.js']);
+    } catch (e) {
+      return 'Error! ' + e;
+    }
+  },
   ':w': () => {
     const contentNode = document.getElementById('nvim-content');
 
@@ -300,10 +307,7 @@ document.addEventListener('keydown', (event) => {
 
     if (temp.length < 1) setNormal();
 
-    document.getElementById('nvim-commands').innerText = temp.replaceAll(
-      ' ',
-      '<20>'
-    );
+    document.getElementById('nvim-commands').innerText = temp.replaceAll(' ', '<20>');
   }
 
   if (key == 'Enter' && temp) {
@@ -323,8 +327,7 @@ document.addEventListener('keydown', (event) => {
     setMode('command');
   } else if (
     (key.length > 1 && !(key === 'Enter' && temp[0] === ':')) ||
-    (temp.length === 0 &&
-      !Object.keys(commands).find((command) => command[0] === key)) ||
+    (temp.length === 0 && !Object.keys(commands).find((command) => command[0] === key)) ||
     (mode !== 'normal' && mode !== 'command')
   )
     return;
@@ -335,10 +338,7 @@ document.addEventListener('keydown', (event) => {
 
   if (commands[temp] && temp[0] !== ':') {
     commands[temp]();
-    document.getElementById('nvim-commands').innerText = temp.replaceAll(
-      ' ',
-      '<20>'
-    );
+    document.getElementById('nvim-commands').innerText = temp.replaceAll(' ', '<20>');
     temp = '';
     return;
   }
@@ -354,16 +354,11 @@ document.addEventListener('keydown', (event) => {
       return;
     }
 
-    document.getElementById(
-      'nvim-commands'
-    ).innerText = `Error: Invalid command: ${temp.slice(1)}`;
+    document.getElementById('nvim-commands').innerText = `Error: Invalid command: ${temp.slice(1)}`;
     temp = '';
     setMode('normal');
     return;
   }
 
-  document.getElementById('nvim-commands').innerText = temp.replaceAll(
-    ' ',
-    '<20>'
-  );
+  document.getElementById('nvim-commands').innerText = temp.replaceAll(' ', '<20>');
 });
