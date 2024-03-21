@@ -3,6 +3,11 @@
   src: url('/resources/Grandstander-VariableFont_wght.ttf');
 }
 
+@font-face {
+  font-family: 'Cascadia Mono';
+  src: url('/resources/caskaydia.otf');
+}
+
 :root {
   outline: none;
 }
@@ -103,9 +108,8 @@ body {
   min-height: calc(100vh - 10rem);
   padding: 5rem;
   font-size: 1rem;
-  font-family: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono',
-    'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono',
-    'Courier New', monospace;
+  font-family: 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace',
+    'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 }
 
 h1 {
@@ -165,6 +169,20 @@ nav a .preview div {
 nav a:hover .preview,
 nav a:focus-within .preview {
   display: block;
+}
+
+/* Bit of a hacky trick to make sure, that the preview does not close */
+nav a:hover .preview::before {
+  content: '';
+
+  top: -4rem;
+  left: -1rem;
+
+  display: block;
+  position: absolute;
+
+  width: 20rem;
+  height: 2rem;
 }
 
 nav a::before {

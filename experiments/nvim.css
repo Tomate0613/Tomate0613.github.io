@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Caskaydia';
-  src: url('./caskaydia.otf');
+  src: url('/resources/caskaydia.otf');
 }
 
 :root {
