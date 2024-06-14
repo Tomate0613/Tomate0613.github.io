@@ -1,25 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discord Ansi colors</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Discord Ansi colors</title>
-  <script src="index.js" defer></script>
-  <link rel="stylesheet" href="./style.css" />
-</head>
+    <meta property="og:title" content="Discord Ansi Generator" />
 
-<body>
-  <h1>Discord Ansi Generator</h1>
-  <div id="fg">Foreground:</div>
-  <div id="bg">Background:</div>
-  <div id="effects">Effects:</div>
-  <div id="cls">Clear:</div>
-  <div id="input-row">
-    <span id="ansi" contenteditable="true"></span>
-    <button id="btn" onclick="copyAnsi()">Copy</button>
-  </div>
-</body>
+    <meta
+      name="description"
+      content="Format and transform text for Discord ANSI code blocks with this tool. Utilize ANSI escape codes for colorful and styled code blocks in Discord."
+    />
+    <meta
+      property="og:description"
+      content="Format and transform text for Discord ANSI code blocks with this tool. Utilize ANSI escape codes for colorful and styled code blocks in Discord."
+    />
 
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tomate.doublekekse.dev/dc-tools/ansi/" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      property="og:image"
+      content="https://tomate.doublekekse.dev/dc-tools/ansi/images/example.png"
+    />
+    <meta name="google-site-verification" content="Pf5dyk4f7lM-H5JMPc77WTTYj1jVIGOAISkUG49rBiA" />
+    <meta name="msvalidate.01" content="A7B8B5810CC3C1557EE083E15F137A3D" />
+
+    <link rel="apple-touch-icon" sizes="76x76" href="/resources/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icons/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/resources/icons/safari-pinned-tab.svg" color="#da532c" />
+
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#da532c" />
+  </head>
+
+  <body>
+    <h1>Discord Ansi Generator</h1>
+    <div id="fg">Foreground:</div>
+    <div id="bg">Background:</div>
+    <div id="effects">Effects:</div>
+    <div id="cls">Clear:</div>
+    <div id="input-row">
+      <span id="ansi" contenteditable="true"></span>
+      <button id="btn" onclick="copyAnsi()">Copy</button>
+    </div>
+  </body>
 </html>
+
