@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="/resources/script/index.js" type="module"></script>
+    <script src="/resources/script/image-cycle.js" defer></script>
 
     <link rel="apple-touch-icon" sizes="76x76" href="/resources/icons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/resources/icons/favicon-32x32.png" />
@@ -25,17 +26,16 @@
     </div>
 
     <div id="mods">
-      <a
-        class="mod image-cycle"
-        tabindex="0"
-        data-folder="/mods/images"
-        data-times="6000,12000,2200,1600"
-        data-start="1"
-        data-stop="4"
-        data-filetype="webp"
-        href="//modrinth.com/mod/total-dragon"
-      >
-        <img width="100%" class="image" />
+      <a class="mod" tabindex="0" href="//modrinth.com/mod/total-dragon">
+        <img
+          width="100%"
+          class="img-cycle"
+          data-folder="images"
+          data-times="6000,12000,2200,1600"
+          src="images/1.webp"
+          data-filetype="webp"
+        />
+
         <div class="mod-overlay">
           <div class="mod-name">Total Dragon</div>
           <div class="mod-description">A fabric mod impoving minecraft's end fight 🐲</div>
@@ -102,4 +102,3 @@
     <div id="particles"></div>
   </body>
 </html>
-
