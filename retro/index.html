@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tomate0613</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      @font-face {
+        font-family: 'Grandstander';
+        src: url('/resources/Grandstander-VariableFont_wght.ttf');
+      }
+
+      @font-face {
+        font-family: 'Caskaydia';
+        src: url('/resources/caskaydia.otf');
+      }
+
+      :root {
+        background: black;
+        color: white;
+
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+      }
+
+      h1 {
+        font-family: 'Grandstander';
+        font-size: 3rem;
+      }
+
+      main {
+        margin: auto;
+        width: 50%;
+        border: 2px solid grey;
+        border-radius: .3rem;
+        padding: 1rem;
+      }
+
+      @media (max-width: 582px) {
+        main {
+          width: 90% !important;
+        }
+      }
+
+      nav a {
+        color: #7ddecf;
+        display: block;
+
+        font-family: 'Caskaydia';
+        text-decoration: none;
+
+        &:focus-within,
+        &:focus,
+        &:hover {
+          outline: none;
+          color: #8ffff5;
+
+          &::before {
+            content: '> ';
+          }
+        }
+      }
+
+      .buttons a {
+        display: inline-block;
+
+        &:focus-within,
+        &:focus,
+        &:hover {
+          filter: brightness(1.4);
+          outline: none;
+
+          transform: translateY(-1px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Hiii :3</h1>
+
+      <h2>Projects</h2>
+      <nav>
+        <a href="/tomate-launcher/">Tomate Launcher</a>
+        <a href="/dc-tools/">Discord Tools</a>
+        <a href="/mods">Minecraft Mods</a>
+      </nav>
+
+      <br />
+
+      <div class="buttons">
+        <a href="//doublekekse.dev">
+          <img src="https://doublekekse.dev/assets/88x31.png" />
+        </a>
+        <a href="/">
+          <img src="./88x31s/tomate.png" />
+        </a>
+        <a href="//neovim.io">
+          <img src="./88x31s/neovim.png" />
+        </a>
+        <a href="//jetbrains.com/de-de/idea">
+          <img src="./88x31s/intellij_idea.png" />
+        </a>
+      </div>
+    </main>
+  </body>
+</html>
