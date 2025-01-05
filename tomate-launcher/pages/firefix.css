@@ -1,9 +1,0 @@
-.card-controls {
-padding: 0.25rem;
-border-top: 1px solid var(--color-ui-alt);
-}
-
-.card-controls .btn-option-menu {
-  position: initial;
-  padding: 0.5rem;
-}
